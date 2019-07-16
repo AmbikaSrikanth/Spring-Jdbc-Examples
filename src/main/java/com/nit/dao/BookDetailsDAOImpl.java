@@ -59,6 +59,7 @@ public class BookDetailsDAOImpl implements BookDetailsDAO {
 		return template.queryForMap(LOAD_BY_AUTHOR_NAME,authorName);
 	}*/
 	public void loadMultipleData(String authorName) {
+		System.out.println("BookDetailsDAOImpl.loadMultipleData()");
 	List<Map<String,Object>> bookList=template.queryForList(LOAD_BY_AUTHOR_NAME, authorName);
 		bookList.forEach(map->{
 			System.out.println(map);
@@ -66,6 +67,7 @@ public class BookDetailsDAOImpl implements BookDetailsDAO {
 	}
 	@Override
 	public void loadAllRecords() {
+		System.out.println("BookDetailsDAOImpl.loadAllRecords()");
 		List<Map<String,Object>> bookList=template.queryForList(LOAD_ALL_RECORDS);
 		for(Map list:bookList) {
 			System.out.println(list);
