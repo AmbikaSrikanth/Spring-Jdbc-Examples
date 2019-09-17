@@ -26,6 +26,7 @@ public class BookDetailsDAOImpl implements BookDetailsDAO {
 	private static final String LOAD_ALL_RECORDS="SELECT * FROM BOOK_DTLS";
 	//injecting predefine dependent object
 	private JdbcTemplate template;
+	private BookDetails b;
 	
 	public void setTemplate(JdbcTemplate template) {
 		this.template = template;
@@ -34,6 +35,7 @@ public class BookDetailsDAOImpl implements BookDetailsDAO {
 	 * thism,ethodis used to insert A record into table
 	 */
 	public int saveData(BookDetails book) {
+		System.out.println("save data method");
 		int cnt=template.update(INSERT_BOOKDTLS_SQL, 
 				book.getBookId(),
 				book.getBookName(),
@@ -109,6 +111,11 @@ public class BookDetailsDAOImpl implements BookDetailsDAO {
 			
 		});
 	
+		
+	}
+	@Override
+	public void deleteBookDetails() {
+		// TODO Auto-generated method stub
 		
 	}
 
