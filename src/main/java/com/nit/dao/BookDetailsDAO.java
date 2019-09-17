@@ -19,6 +19,7 @@ public interface BookDetailsDAO {
 	public List<BookDetails> loadAll();
 	public void batchInsertion(List<BookDetails> books);
 	public void deleteBookDetails();
+	//Syso................
 	 
 
 }
