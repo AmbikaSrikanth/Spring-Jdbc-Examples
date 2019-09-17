@@ -5,6 +5,7 @@ import java.util.Map;
 
 import com.nit.model.BookDetails;
 
+// bookdetails dao
 public interface BookDetailsDAO {
 	public int saveData(BookDetails book);
 	public int deleteById(Integer bookId);
@@ -17,6 +18,7 @@ public interface BookDetailsDAO {
 	public BookDetails loadAllById(Integer bookId);
 	public List<BookDetails> loadAll();
 	public void batchInsertion(List<BookDetails> books);
+	public void deleteBookDetails();
 	 
 
 }
